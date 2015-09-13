@@ -1,8 +1,9 @@
-# [FitNesse](http://fitnesse.org/)  [![maven central](https://maven-badges.herokuapp.com/maven-central/org.fitnesse/fitnesse/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/org.fitnesse/fitnesse)
 
-Welcome to FitNesse, the fully integrated stand-alone acceptance testing framework and wiki.
+# FitNesse-CloudTest
 
-To get started, check out [http://fitnesse.org](http://fitnesse.org)!
+Welcome to [FitNesse-CloudTest](https://github.com/TotoroFitnesse/FitNesse-CloudTest), the fully integrated stand-alone acceptance testing framework and wiki.
+
+To get started, check out [git@github.com:TotoroFitnesse/FitNesse-CloudTest.git](git@github.com:TotoroFitnesse/FitNesse-CloudTest.git).
 
 
 
