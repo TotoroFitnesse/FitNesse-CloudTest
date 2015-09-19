@@ -143,6 +143,8 @@
 	    <ivy:cachepath pathid="compile.classpath" conf="default"/>
         <javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true" source="1.6" target="1.6" includeantruntime="false">
             <classpath>
+                <pathelement path = "${lib.dir}/selenium-java-2.37.0.jar"/>
+                <pathelement path = "${lib.dir}/selenium-server-standalone-2.37.0.jar"/>
                 <path refid="compile.classpath"/>
             </classpath>
         </javac>
