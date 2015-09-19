@@ -105,7 +105,7 @@ public class FileResponderTest {
     assertMatches(HTTP_DATE_REGEXP, lastModifiedHeader);
   }
 
-  private void test304IfNotModified(String resource) throws IOException {
+  private void test304IfNotModified(String resource) throws Exception {
     Locale.setDefault(Locale.US);
     Calendar now = new GregorianCalendar();
     now.add(Calendar.DATE, -1);
@@ -129,12 +129,12 @@ public class FileResponderTest {
   }
 
   @Test
-  public void test304IfNotModifiedForFiles() throws IOException {
+  public void test304IfNotModifiedForFiles() throws Exception {
     test304IfNotModified("files/testFile1");
   }
 
   @Test
-  public void test304IfNotModifiedForClasspathResources() throws IOException {
+  public void test304IfNotModifiedForClasspathResources() throws Exception {
     test304IfNotModified("files/fitnesse/css/fitnesse.css");
   }
 

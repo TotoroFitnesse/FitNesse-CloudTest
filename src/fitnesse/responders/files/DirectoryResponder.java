@@ -34,7 +34,7 @@ class DirectoryResponder implements SecureResponder {
   }
 
   @Override
-  public Response makeResponse(FitNesseContext context, Request request) {
+  public Response makeResponse(FitNesseContext context, Request request) throws Exception{
     this.context = context;
 
     if (!resource.endsWith("/")) {
@@ -64,7 +64,7 @@ class DirectoryResponder implements SecureResponder {
     return simpleResponse;
   }
 
-  private Response makeDirectoryListingJsonPage() {
+  private Response makeDirectoryListingJsonPage() throws Exception {
     JSONArray listing = new JSONArray();
     for (FileInfo fileInfo : makeFileInfo(FileUtil.getDirectoryListing(requestedDirectory))) {
       JSONObject fiObject = new JSONObject();

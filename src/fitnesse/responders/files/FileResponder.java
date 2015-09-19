@@ -37,7 +37,7 @@ public class FileResponder implements SecureResponder {
   Date lastModifiedDate;
 
   @Override
-  public Response makeResponse(FitNesseContext context, Request request) throws IOException {
+  public Response makeResponse(FitNesseContext context, Request request) throws Exception {
     String rootPath = context.getRootPagePath();
     try {
       resource = URLDecoder.decode(request.getResource(), FileUtil.CHARENCODING);
