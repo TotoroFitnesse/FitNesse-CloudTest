@@ -35,7 +35,7 @@ public class PropertiesResponder implements SecureResponder {
   private SimpleResponse response;
   private HtmlPage html;
 
-  public Response makeResponse(FitNesseContext context, Request request) {
+  public Response makeResponse(FitNesseContext context, Request request) throws Exception{
     response = new SimpleResponse();
     resource = request.getResource();
     path = PathParser.parse(resource);
@@ -50,7 +50,7 @@ public class PropertiesResponder implements SecureResponder {
     return response;
   }
 
-  private void makeContent(FitNesseContext context, Request request) {
+  private void makeContent(FitNesseContext context, Request request) throws Exception{
     if ("json".equals(request.getInput("format"))) {
       JSONObject jsonObject = makeJson();
       try {
@@ -65,7 +65,7 @@ public class PropertiesResponder implements SecureResponder {
     }
   }
 
-  private JSONObject makeJson() {
+  private JSONObject makeJson() throws Exception{
     response.setContentType(Response.Format.JSON);
     JSONObject jsonObject = new JSONObject();
     String attributes[] = new String[] { TEST.toString(), PropertySEARCH,
